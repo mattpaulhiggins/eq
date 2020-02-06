@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <Questions></Questions>
+  <div class="quiz">
+    <questions></questions>
   </div>
 </template>
 
@@ -9,11 +9,9 @@
 import Questions from "@/components/Questions";
 
 export default {
-  name: "home",
+  name: "quiz",
   components: {
     Questions
   }
 };
 </script>
-
-<style lang="scss" scoped></style>
