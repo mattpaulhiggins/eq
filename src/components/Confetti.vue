@@ -13,7 +13,6 @@ export default {
   },
   mounted() {
     const confettiCanvas = document.getElementById("confetti-canvas");
-    console.log(confettiCanvas);
     var myConfetti = confetti.create(confettiCanvas, {
       resize: true,
       useWorker: true

@@ -32,23 +32,7 @@ body {
 
 .content {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: relative;
 }
-
-// #nav {
-//   padding: 30px;
-//   display: flex;
-//   flex-direction: column;
-//   height: 100vh;
-//   justify-content: space-between;
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 </style>

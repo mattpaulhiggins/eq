@@ -30,6 +30,7 @@
         Next
       </button>
     </div>
+    <Bubbles></Bubbles>
   </div>
 </template>
 
@@ -38,6 +39,7 @@ import Timer from "@/components/Timer";
 import Answer from "@/components/Answer";
 import Question from "@/components/Question";
 import Confetti from "@/components/Confetti";
+import Bubbles from "@/components/Bubbles";
 
 export default {
   name: "Questions",
@@ -45,7 +47,8 @@ export default {
     Timer,
     Answer,
     Question,
-    Confetti
+    Confetti,
+    Bubbles
   },
   data() {
     return {
@@ -56,19 +59,17 @@ export default {
       resetTimer: false
     };
   },
-  mounted() {},
   methods: {
     handleTimeout() {
-      this.questionAnswered = true;
+      this.nextQuestion();
     },
     handleAnswer(e) {
-      this.questionAnswered = true;
-      if (e) {
-        this.fireConfetti = !this.fireConfetti;
-        this.score++;
-        console.log("answered - correct");
-      } else {
-        console.log("answered - incorrect");
+      if (!this.questionAnswered) {
+        this.questionAnswered = true;
+        if (e) {
+          this.fireConfetti = !this.fireConfetti;
+          this.score++;
+        }
       }
     },
     nextQuestion() {
@@ -89,7 +90,7 @@ export default {
 .questions {
   position: relative;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,20 +98,15 @@ export default {
   overflow: hidden;
 
   & > .upper-container {
-    flex-basis: 150px;
     flex-shrink: 0;
-    // outline: 1px dashed red;
   }
 
   & > .button-container {
-    // flex-basis: 50px;
     flex-shrink: 0;
-    // outline: 1px dashed blue;
   }
 
   & > .question-container {
     flex-grow: 1;
-    // outline: 1px dashed gold;
   }
 }
 
@@ -172,7 +168,7 @@ ul {
 
 .question-container {
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 
 .button-container {
@@ -194,5 +190,15 @@ ul {
 .fade-enter-active,
 .fade-leave-active {
   transition: all 1000ms cubic-bezier(0, 0.5, 0, 1);
+}
+
+#bubbles {
+  position: absolute;
+}
+
+@media only screen and (min-width: 600px) {
+  .questions {
+    width: 480px;
+  }
 }
 </style>
