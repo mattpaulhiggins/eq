@@ -1,8 +1,8 @@
 # endless quiz
 
-##[https://mattpaulhiggins.github.io/eq/](https://mattpaulhiggins.github.io/eq/)
+## [https://mattpaulhiggins.github.io/eq/](https://mattpaulhiggins.github.io/eq/)
 
-###Credits:
+### Credits:
 
 Design from [Quiz App UI - Oma](https://dribbble.com/shots/6508352-Quiz-App-UI-Oma) by: [JD](https://dribbble.com/Jaydev)
 
