@@ -10,7 +10,7 @@
       ></Timer>
       <div class="question-label-container">
         <div class="question-label">
-          Question {{ score }}
+          Score {{ score }}
           <span>/{{ questionCount }}</span>
         </div>
         <hr />
@@ -152,9 +152,10 @@ ul {
   margin: 20px 0px;
   border-radius: 1000px;
   width: 150px;
+  transition: opacity 200ms ease;
 
   &:disabled {
-    filter: saturate(0);
+    opacity: 0.1;
   }
 }
 

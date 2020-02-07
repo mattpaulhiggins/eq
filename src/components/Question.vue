@@ -29,7 +29,23 @@ export default {
   },
   data() {
     return {
-      question: {}
+      question: {
+        question: "Loading...",
+        answers: [
+          {
+            answer: "Loading...",
+            state: "waiting"
+          },
+          {
+            answer: "Loading...",
+            state: "waiting"
+          },
+          {
+            answer: "Loading...",
+            state: "waiting"
+          }
+        ]
+      }
     };
   },
   mounted() {
@@ -43,7 +59,6 @@ export default {
           return;
         }
         response.json().then(data => {
-          console.log(data.results[0]);
           this.formatQuestion(data.results[0]);
         });
       })
@@ -70,6 +85,8 @@ export default {
         answers: answers,
         answered: false
       };
+
+      console.log(this.question);
     },
     handleAnswer(e) {
       if (!this.question.answered) {

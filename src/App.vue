@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/quiz">Quiz</router-link>
-    </div>-->
     <div class="content">
       <router-view />
     </div>
@@ -20,7 +15,7 @@
 
 body {
   margin: 0;
-  background: #252c4a;
+  background: var(--color-bg);
   color: white;
   font-family: "Work Sans", sans-serif;
   letter-spacing: -0.02em;

@@ -79,7 +79,6 @@ export default {
 }
 
 .icon--correct {
-  // color: lime;
   color: #117eeb;
 }
 
@@ -89,9 +88,5 @@ export default {
 
 .answer--incorrect {
   border: 4px solid #fc4f6a;
-}
-
-.answer--correct {
-  // border: 6px solid lime;
 }
 </style>

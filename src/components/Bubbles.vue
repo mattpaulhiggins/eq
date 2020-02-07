@@ -7,6 +7,7 @@
 <script>
 export default {
   mounted() {
+    const BUBBLE_COUNT = 12;
     let canv = document.getElementById("bubbles-canvas");
     let canvasWidth = canv.width;
     let canvasHeight = canv.height;
@@ -40,7 +41,7 @@ export default {
           this.x = Math.floor(Math.random() * (canvasWidth - 20) + 20);
           this.alpha = 1;
         } else {
-          if (this.y < canvasHeight - canvasHeight / 4) {
+          if (this.y < canvasHeight - canvasHeight / 7) {
             this.alpha -= 0.05;
           }
           this.y -= this.velocity;
@@ -50,7 +51,7 @@ export default {
 
     let bubbles = [];
 
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < BUBBLE_COUNT; i++) {
       bubbles.push(new Bubble());
     }
 

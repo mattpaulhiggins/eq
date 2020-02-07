@@ -18,7 +18,6 @@ export default {
       useWorker: true
     });
   },
-  methods: {},
   watch: {
     fire: function() {
       confetti({
